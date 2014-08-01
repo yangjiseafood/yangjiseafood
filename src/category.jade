@@ -1,0 +1,67 @@
+extends base
+
+block content
+  ul#menu
+    each item in $i18n.category.menu
+      li
+        a(href="#", name="item.name")= item.text
+  #detail-wrapper
+    #detail
+
+block scripts
+  script(src="/js/mousewheel.js")
+  script(src="/js/setScrollbar.js")
+  script.
+    function GetMenu(category){
+        $.ajax({
+            type:"GET",
+            url: category+".txt",
+            beforeSend:showLoading,
+            error:function(){$('#detail').html('Failed to get content.Please refresh later.');},
+            success:loadHTML
+        });
+    }
+    function showLoading(){
+        $('#detail').html('<img src="/img/loading.png" />');
+    }
+    function loadHTML(data){
+        $('#detail').css('background','none');
+        $('#detail').html(data);
+    }
+    function GetQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return unescape(r[2]); return null;
+    }
+  script.
+    $(document).ready(function(){
+        //  Initialize Backgound Stretcher
+        $('BODY').bgStretcher({
+            images: ['/img/bg2.jpg', '/img/bg3.jpg', '/img/bg1.jpg'], 
+            imageWidth: 1680, 
+            imageHeight: 1050,
+            preloadImg: true,
+            transitionEffect: 'fade',
+            slideShowSpeed: 2000,
+            nextSlideDelay: 40000
+        });
+        //Get menu by category type
+        if(GetQueryString("type")!=null)
+          GetMenu(GetQueryString("type"));
+        else
+          GetMenu("seasoning");//default
+        //Ajax function
+        $('#menu').click(function(){
+            var evt=evt||window.event;
+            var evt_targ=evt.srcElement||evt.target;
+            if(evt_targ.tagName=='A'){
+                var category = evt_targ.getAttribute('name');
+                GetMenu(category);
+            }
+        });
+        $('#slogan').css('top','100px');
+        $('#detail-wrapper').css("height",$(document).height()-300);
+        var intro = $("#detail");
+        var wrapper = $("#detail-wrapper");
+        setScrollBar(intro,wrapper);
+    });

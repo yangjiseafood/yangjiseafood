@@ -1,0 +1,29 @@
+extends base
+
+block content
+  div#content
+    div#about
+      h2
+        a(href="introduction.html", title="#{$i18n.home.introduction.title}") #{$i18n.home.introduction.title}
+      p #{$i18n.home.introduction.content}
+    div#gallery
+      h2
+        a(href="cetegory.html", title="#{$i18n.home.gallery.title}") #{$i18n.home.gallery.title}
+      div#album
+        each image, index in $i18n.home.gallery.images
+          a(href="category.html?type=#{image.url}", title="#{image.title}")
+            img.album-pic(src="/img/album#{index+1}.jpg", width="200", height="120", alt="#{image.title}")
+            span #{image.title}
+
+block scripts
+  script.
+    $(function() {
+      $('body').bgStretcher({
+          images: ['/img/bg3.jpg', '/img/bg2.jpg', '/img/bg1.jpg'],
+          imageWidth: 1680, 
+          imageHeight: 1050,
+          preloadImg: true,
+          transitionEffect: 'fade',
+          slideShowSpeed: 2000
+      });
+    });

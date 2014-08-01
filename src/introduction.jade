@@ -1,0 +1,29 @@
+extends base
+
+block content
+  #intro-wrapper
+    #introduction
+      each paragraph in $i18n.introduction.content
+        p= paragraph
+
+block scripts
+  script(src="/js/mousewheel.js")
+  script(src="/js/setScrollbar.js")
+  script.
+    $(document).ready(function(){
+        //  Initialize Backgound Stretcher
+        $('BODY').bgStretcher({
+            images: ['/img/bg1.jpg', '/img/bg2.jpg', '/img/bg3.jpg'], 
+            imageWidth: 1680, 
+            imageHeight: 1050,
+            preloadImg: true,
+            transitionEffect: 'fade',
+            slideShowSpeed: 2000,
+            nextSlideDelay: 40000
+        });
+        $('#slogan').css('top','100px');
+        $('#intro-wrapper').css("height",$(document).height()*3/5);
+        var intro = $("#introduction");
+        var wrapper = $("#intro-wrapper");
+        setScrollBar(intro,wrapper);
+    });

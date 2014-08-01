@@ -1,0 +1,34 @@
+doctype strict
+html
+  head
+    meta(http-equiv="Content-Type", content="text/html; charset=UTF-8")
+    block title
+      title #{$i18n.title}
+    link(rel="stylesheet", href="/css/bgstretcher.css")
+    link(rel="stylesheet", href="/css/style.css")
+    <!--[if (IE 7)(IE 8)]>
+    link(rel="stylesheet", href="/css/IE78fix.css")
+    <![endif]-->
+    <!--[if IE6]>
+    link(rel="stylesheet", href="/css/IE6.css")
+    script(src="/js/unitpngfix.js")
+    <![endif]-->
+    script(src="/js/jquery.min.js")
+    script(src="/js/bgstretcher.min.js")
+    block scripts
+body
+  div#header
+    block header
+      h1#logo
+        a(href="index.html", title="#{$i18n.description}") #{$i18n.title}
+      ul#navigation
+        each nav in $i18n.navigation
+          li
+            a(href="#{nav.url}", title="#{nav.name}")= nav.name
+      a#language(href="#{$i18n.other_language.url}") #{$i18n.other_language.name}
+  block slogan
+    div#slogan
+  block content
+  div#footer
+    block footer
+      span #{$i18n.copyright}

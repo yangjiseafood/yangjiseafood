@@ -1,0 +1,20 @@
+{
+  "name": "YangjiSeafood",
+  "version": "0.0.0",
+  "authors": [
+    "simonday <simonday@foxmail.com>"
+  ],
+  "description": "yangjiseafood.com website",
+  "license": "MIT",
+  "homepage": "http://yangjiseafood.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "1.8.3"
+  }
+}

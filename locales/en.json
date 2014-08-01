@@ -1,0 +1,72 @@
+{
+  "title": "Yangji Seafood Trading",
+  "description": "Yangji Seafood Trading,Premium Seafood Supplier",
+  "navigation": [{
+    "name": "Home",
+    "url": "index.html"
+  }, {
+    "name": "Introduction",
+    "url": "introduction.html"
+  }, {
+    "name": "Category",
+    "url": "category.html"
+  }, {
+    "name": "Contact",
+    "url": "contact.html"
+  }],
+  "other_language": {
+    "name": "中文",
+    "url": "/"
+  },
+  "home": {
+    "introduction": {
+      "title": "About Yangji",
+      "content": "Established in 1999,with main focus characteristics of the fish products and premium seafood supplies.Yangji provides and deliver fresh and dried seafood products and seasoning."
+    },
+    "gallery": {
+      "title": "Gallery",
+      "images": [
+        {
+          "title": "Fresh Seafood",
+          "url": "fresh-seafood"
+        },
+        {
+          "title": "Dried Seafood",
+          "url": "dried-seafood"
+        },
+        {
+          "title": "Seasoning",
+          "url": "seasoning"
+        }
+      ]
+    }
+  },
+  "introduction": {
+    "content": ["Our company-\"Wuhan Wuchang fisheries operations department\" were established in 1999,with main focus characteristics of the fish products and premium seafood supplies.Yangji provides and deliver fresh and dried seafood products and seasoning to hotels such as: Hankou Oriential Hotel,Xiantao Gaiyang Guesthouse,Huatian Hotel,Yichang Taohualing Hotel,Seven Seven Eight and Taoshan Guesthouse.",
+                "In line with the expansion of hotels,clubs and catering needs increases,we have established \"Wuhan Yangji Seafood Trading Firm\" and \"Jianghan Distric Dongyang Frozen Product Firm\" in 2002 and 2011 which are located at Hankou South China Seafood Market. The main core of business in our company including superior dried seafood products,bird's nest,legalize games meat,fresh and dried cooking seasoning.Currently our company distribute and supply products to more than 30 hotels and clubs such as Hong Shan Hotel,Wanda Westin Hotel,Gao Xiong Hotel,East Lake Club,East Lake Conference Center,Guanggu Kingdom Hotel,Guanggu Dongxing Hotel,Hu Jing Restaurant,Run Feng Hotel,Ramada Plaza Hotel,Miao Mountain Grace Garden Hotel,Hanyang Yan Yang Tian Restaurant,Three Five Restaurant,Zheng Yuan Xiang Harbor,Ji Yang Hotel,Zhuodaoquan Building,Hua Shi Gui Yuan Hotel,Gold Crown Qing Lian Restaurant,Sunshine Hotel,Yangtze Hotel and Han Zheng Rui Xing Hotel.",
+               "Our company encompasses of 40 employees with 5 professional purchasers which were accredited in Guangzhou,Xiamen,Qingdao and Dalian.We have 7 trucks and 10 motorbikes for goods distribution services at locally.Our teams are committed to provide timely distribution service delivery and controlled quality goods to hotel upon request.Since the opening our company has won lots of recognitions and awards including: Civilized Business,Excellent Operator Company,Integrity Business and Excellent Supplier form the local Government offices.As the member of Wuhan Quanzhou Commerce Organization-Vice Chamber,it is part of my resonsibility to upload business ethic and drive quality services rendered to all customers and business partners.",
+               "It is also our company commitment and best practices to welcome suggestions and feedback for improvement from all business partners to ensure continual development in order to serve our customers or business partners effectively and efficiently.",
+               "Sincerely yours,",
+               "Mr. Dai Sau Yang",
+               "Executive Chairman",
+               "Yangji Seafood Trading"]
+  },
+  "category": {
+    "menu": [{
+      "name": "fresh-seafood",
+      "text": "Fresh Seafood"
+    }, {
+      "name": "dried-seafood",
+      "text": "Dried Seafood"
+    }, {
+      "name": "seasoning",
+      "text": "Seasoning"
+    }]
+  },
+  "contact": {
+    "title": "Map",
+    "address": "21-24,13 Street,\nHuanan Seafood Fishery Wholesale Market,\n108 Hankou Fazhan Avenue",
+    "tel_fax": "Tel 027-65657797\nFax 027-85836132(Office)"
+  },
+  "copyright": "Copyright © 2012 Yangji Seafood Trading."
+}
